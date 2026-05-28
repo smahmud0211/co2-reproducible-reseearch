@@ -38,6 +38,28 @@ class DataProcessor:
 
         return df
 
+    def add_region_group(self, dataframe: pd.DataFrame) -> pd.DataFrame:
+        """
+        Add EU / Non-EU classification.
+        """
+
+        eu_countries = [
+            "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus",
+            "Czechia", "Denmark", "Estonia", "Finland", "France",
+            "Germany", "Greece", "Hungary", "Ireland", "Italy",
+            "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands",
+            "Poland", "Portugal", "Romania", "Slovakia", "Slovenia",
+            "Spain", "Sweden"
+        ]
+
+        dataframe = dataframe.copy()
+
+        dataframe["region_group"] = dataframe["country"].apply(
+            lambda country: "EU" if country in eu_countries else "Non-EU"
+        )
+
+        return dataframe
+
 
 if __name__ == "__main__":
     from data_loader import DataLoader
@@ -48,6 +70,7 @@ if __name__ == "__main__":
     processor = DataProcessor(data)
 
     cleaned_data = processor.remove_missing_values()
+    classified_data = processor.add_region_group(cleaned_data)
 
-    print(cleaned_data.head())
-    print(cleaned_data.shape)
+    print(classified_data.head())
+    print(classified_data["region_group"].value_counts())
