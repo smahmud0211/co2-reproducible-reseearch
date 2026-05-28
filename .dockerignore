@@ -1,0 +1,6 @@
+venv/
+_pycache_/
+*.pyc
+.git/
+.DS_Store
+outputs/figures/
