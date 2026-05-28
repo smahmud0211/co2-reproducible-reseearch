@@ -34,6 +34,12 @@ class CO2Analyzer:
             .head(n)
         )
 
+    def gdp_co2_correlation(self) -> float:
+        """
+        Calculate correlation between GDP and CO2 emissions.
+        """
+        return self.dataframe["gdp"].corr(self.dataframe["co2"])
+
 
 if __name__ == "__main__":
     from data_loader import DataLoader
@@ -49,3 +55,4 @@ if __name__ == "__main__":
 
     print(analyzer.global_emissions_by_year().head())
     print(analyzer.top_emitters(year=2022))
+    print("GDP-CO2 correlation:", analyzer.gdp_co2_correlation())
