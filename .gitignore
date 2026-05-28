@@ -1,4 +1,6 @@
 _pycache_/
 *.pyc
-venv/_pycache_/
-*.pyc
+venv/
+.DS_Store
+.ipynb_checkpoints/
+outputs/figures/
