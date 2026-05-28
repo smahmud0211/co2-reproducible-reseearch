@@ -44,3 +44,27 @@ class CO2Visualizer:
         plt.tight_layout()
         plt.savefig(self.output_dir / f"top_emitters_{year}.png")
         plt.close()
+
+    def plot_region_comparison(self, dataframe: pd.DataFrame) -> None:
+        """
+        Plot average CO2 emissions for EU vs Non-EU countries over time.
+        """
+        region_data = (
+            dataframe
+            .groupby(["year", "region_group"], as_index=False)["co2"]
+            .mean()
+        )
+
+        plt.figure(figsize=(10, 6))
+
+        for group in region_data["region_group"].unique():
+            subset = region_data[region_data["region_group"] == group]
+            plt.plot(subset["year"], subset["co2"], label=group)
+
+        plt.xlabel("Year")
+        plt.ylabel("Average CO2 emissions")
+        plt.title("EU vs Non-EU CO2 Emissions Over Time")
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(self.output_dir / "eu_vs_non_eu_emissions.png")
+        plt.close()
