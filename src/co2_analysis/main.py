@@ -22,11 +22,16 @@ def main() -> None:
     global_data = analyzer.global_emissions_by_year()
     top_emitters = analyzer.top_emitters(year=2022)
 
+    correlation = analyzer.gdp_co2_correlation()
+    regression = analyzer.gdp_co2_regression()
+
     visualizer = CO2Visualizer(clean_data)
     visualizer.plot_global_emissions(global_data)
     visualizer.plot_top_emitters(top_emitters, year=2022)
 
     print("Pipeline completed. Figures saved in outputs/figures/")
+    print(f"GDP-CO2 correlation: {correlation}")
+    print(f"GDP-CO2 regression: {regression}")
 
 
 if __name__ == "__main__":
