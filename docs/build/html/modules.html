@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>co2_analysis &#8212; CO2 Reproducible Research Project 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="co2-analysis">
+<h1>co2_analysis<a class="headerlink" href="#co2-analysis" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="co2_analysis.html">co2_analysis package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="co2_analysis.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="co2_analysis.html#module-co2_analysis.analyzer">co2_analysis.analyzer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="co2_analysis.html#co2_analysis.analyzer.CO2Analyzer"><code class="docutils literal notranslate"><span class="pre">CO2Analyzer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.analyzer.CO2Analyzer.gdp_co2_correlation"><code class="docutils literal notranslate"><span class="pre">CO2Analyzer.gdp_co2_correlation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.analyzer.CO2Analyzer.gdp_co2_regression"><code class="docutils literal notranslate"><span class="pre">CO2Analyzer.gdp_co2_regression()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.analyzer.CO2Analyzer.global_emissions_by_year"><code class="docutils literal notranslate"><span class="pre">CO2Analyzer.global_emissions_by_year()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.analyzer.CO2Analyzer.top_emitters"><code class="docutils literal notranslate"><span class="pre">CO2Analyzer.top_emitters()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="co2_analysis.html#module-co2_analysis.data_loader">co2_analysis.data_loader module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="co2_analysis.html#co2_analysis.data_loader.DataLoader"><code class="docutils literal notranslate"><span class="pre">DataLoader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.data_loader.DataLoader.load_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="co2_analysis.html#module-co2_analysis.main">co2_analysis.main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="co2_analysis.html#co2_analysis.main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="co2_analysis.html#module-co2_analysis.processor">co2_analysis.processor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="co2_analysis.html#co2_analysis.processor.DataProcessor"><code class="docutils literal notranslate"><span class="pre">DataProcessor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.processor.DataProcessor.add_region_group"><code class="docutils literal notranslate"><span class="pre">DataProcessor.add_region_group()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.processor.DataProcessor.remove_missing_values"><code class="docutils literal notranslate"><span class="pre">DataProcessor.remove_missing_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.processor.DataProcessor.select_columns"><code class="docutils literal notranslate"><span class="pre">DataProcessor.select_columns()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="co2_analysis.html#module-co2_analysis.visualizer">co2_analysis.visualizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="co2_analysis.html#co2_analysis.visualizer.CO2Visualizer"><code class="docutils literal notranslate"><span class="pre">CO2Visualizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.visualizer.CO2Visualizer.plot_global_emissions"><code class="docutils literal notranslate"><span class="pre">CO2Visualizer.plot_global_emissions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.visualizer.CO2Visualizer.plot_region_comparison"><code class="docutils literal notranslate"><span class="pre">CO2Visualizer.plot_region_comparison()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="co2_analysis.html#co2_analysis.visualizer.CO2Visualizer.plot_top_emitters"><code class="docutils literal notranslate"><span class="pre">CO2Visualizer.plot_top_emitters()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="co2_analysis.html#module-co2_analysis">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">CO2 Reproducible Research Project</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Said, Sabir, Aykhan, Nural.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

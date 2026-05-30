@@ -4,10 +4,10 @@ install:
 	pip install -r requirements.txt
 
 run:
-	python3 src/co2_analysis/main.py
+	PYTHONPATH=src python3 src/co2_analysis/main.py
 
 report:
-	python3 -m jupyter nbconvert --to html --execute reports/final_report.ipynb --output final_report.html
+	PYTHONPATH=src python3 -m jupyter nbconvert --to html --execute reports/final_report.ipynb --output final_report.html
 
 all: run report
 

@@ -2,10 +2,10 @@
 Main pipeline for reproducing the CO2 emissions analysis.
 """
 
-from data_loader import DataLoader
-from processor import DataProcessor
-from analyzer import CO2Analyzer
-from visualizer import CO2Visualizer
+from co2_analysis.data_loader import DataLoader
+from co2_analysis.processor import DataProcessor
+from co2_analysis.analyzer import CO2Analyzer
+from co2_analysis.visualizer import CO2Visualizer
 
 
 def main() -> None:
