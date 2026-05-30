@@ -19,8 +19,7 @@ class CO2Analyzer:
         Calculate total global CO2 emissions by year.
         """
         return (
-            self.dataframe
-            .groupby("year", as_index=False)["co2"]
+            self.dataframe.groupby("year", as_index=False)["co2"]
             .sum()
             .rename(columns={"co2": "total_co2"})
         )

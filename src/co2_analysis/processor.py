@@ -17,14 +17,7 @@ class DataProcessor:
         """
         Select important columns for analysis.
         """
-        columns = [
-            "country",
-            "year",
-            "co2",
-            "co2_per_capita",
-            "gdp",
-            "population"
-        ]
+        columns = ["country", "year", "co2", "co2_per_capita", "gdp", "population"]
 
         df = self.dataframe[columns]
         return df
@@ -44,12 +37,33 @@ class DataProcessor:
         """
 
         eu_countries = [
-            "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus",
-            "Czechia", "Denmark", "Estonia", "Finland", "France",
-            "Germany", "Greece", "Hungary", "Ireland", "Italy",
-            "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands",
-            "Poland", "Portugal", "Romania", "Slovakia", "Slovenia",
-            "Spain", "Sweden"
+            "Austria",
+            "Belgium",
+            "Bulgaria",
+            "Croatia",
+            "Cyprus",
+            "Czechia",
+            "Denmark",
+            "Estonia",
+            "Finland",
+            "France",
+            "Germany",
+            "Greece",
+            "Hungary",
+            "Ireland",
+            "Italy",
+            "Latvia",
+            "Lithuania",
+            "Luxembourg",
+            "Malta",
+            "Netherlands",
+            "Poland",
+            "Portugal",
+            "Romania",
+            "Slovakia",
+            "Slovenia",
+            "Spain",
+            "Sweden",
         ]
 
         dataframe = dataframe.copy()

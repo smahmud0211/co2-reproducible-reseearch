@@ -49,11 +49,9 @@ class CO2Visualizer:
         """
         Plot average CO2 emissions for EU vs Non-EU countries over time.
         """
-        region_data = (
-            dataframe
-            .groupby(["year", "region_group"], as_index=False)["co2"]
-            .mean()
-        )
+        region_data = dataframe.groupby(["year", "region_group"], as_index=False)[
+            "co2"
+        ].mean()
 
         plt.figure(figsize=(10, 6))
 
